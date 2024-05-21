@@ -48,10 +48,8 @@ const config = {
         "15": "60px",
       },
       colors: {
-        blogBackground: "#ffffff",
-        blogBackgroundBlack: "#0A0909",
-        blogAbsoluteBlack: "#000000",
-        blogThickRed: "#920028",
+        backgroundBlack: "#0A0909",
+        thickRed: "#920028",
         gray01: "#D2C9CD",
         gray02: "#B4ABAF",
         gray03: "#968D91",
