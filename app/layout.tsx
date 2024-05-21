@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
-import MainLayout from "@/components/main-layout";
 
-const inter = Inter({ subsets: ["latin"] });
+import { pretendard } from "@/public/fonts/fonts";
+import MainLayout from "@/components/main-layout";
 
 export const viewport: Viewport = {
   initialScale: 1,
@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={inter.className}>
+      <body className={`${pretendard.className}`}>
         <MainLayout>{children}</MainLayout>
       </body>
     </html>

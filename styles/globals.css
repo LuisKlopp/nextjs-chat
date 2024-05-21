@@ -6,8 +6,17 @@ html,
 body,
 :root {
   height: 100%;
+  line-height: normal;
   letter-spacing: -0.063rem;
   scroll-behavior: smooth;
+}
+
+.font-pretendard {
+  font-family: "Pretendard", sans-serif;
+}
+
+.font-jua {
+  font-family: "Jua", sans-serif;
 }
 
 @layer base {

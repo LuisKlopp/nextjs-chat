@@ -15,6 +15,10 @@ const config = {
       padding: "2rem",
     },
     extend: {
+      fontFamily: {
+        pretendard: ["Pretendard", "sans-serif"],
+        jua: ["Jua", "sans-serif"],
+      },
       screens: {
         sm: "576px",
         md: "768px",
