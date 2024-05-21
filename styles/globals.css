@@ -7,24 +7,7 @@ body,
 :root {
   height: 100%;
   letter-spacing: -0.063rem;
-  line-height: 2rem;
   scroll-behavior: smooth;
-}
-
-pre > code > span {
-  font-size: 14px;
-  line-height: 1.3rem;
-}
-
-.post-image {
-  width: 100%;
-  border-radius: 8px;
-  border: 2px solid gray;
-}
-
-img {
-  width: auto;
-  max-height: 100%;
 }
 
 @layer base {
@@ -103,24 +86,6 @@ img {
 @layer utilities {
   .shadow-custom {
     box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
-  }
-  .modal-background {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  .input-custom {
-    width: 100%;
-    border-radius: 8px;
-    border: 1px solid #b4abaf;
-    padding: 4px 10px;
-    outline: none;
-    &::placeholder {
-      font-size: 16px;
-      font-weight: 500;
-      color: #b4abaf;
-    }
-  }
-  .list-marker-black ::marker {
-    color: black;
   }
 }
 
