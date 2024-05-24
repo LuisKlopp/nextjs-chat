@@ -44,20 +44,24 @@ const Chat = () => {
   };
 
   return (
-    <div className="w-full max-w-xl h-[100dvh] flex flex-col justify-between bg-[#faf0f0] fixed">
-      <div className="w-full flex justify-center p-4">
-        <span className="text-lg font-bold font-jua">
-          <span className="text-gray05">Ellio</span> 연애 소셜링
+    <div className="w-full max-w-xl h-[100dvh] flex flex-col justify-between fixed bg-[#f5f5f5]">
+      <div className="w-full flex justify-center p-4 bg-complex-gradient h-16 items-center">
+        <span className="text-sm font-bold font-jua text-white">
+          Ellio 익명 채팅
         </span>
       </div>
-      {messages.map((msg, index) => (
-        <div key={index}>{msg.message}</div>
-      ))}
-      <ChatInput
-        message={message}
-        setMessage={setMessage}
-        handleSendMessage={handleSendMessage}
-      />
+      <div>
+        {messages.map((msg, index) => (
+          <div key={index}>{msg.message}</div>
+        ))}
+      </div>
+      <div>
+        <ChatInput
+          message={message}
+          setMessage={setMessage}
+          handleSendMessage={handleSendMessage}
+        />
+      </div>
     </div>
   );
 };

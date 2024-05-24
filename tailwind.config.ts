@@ -15,6 +15,10 @@ const config = {
       padding: "2rem",
     },
     extend: {
+      backgroundImage: {
+        "complex-gradient":
+          "linear-gradient(to right, #4b4b4b 10%, #000000 100%)",
+      },
       fontFamily: {
         pretendard: ["Pretendard", "sans-serif"],
         jua: ["Jua", "sans-serif"],

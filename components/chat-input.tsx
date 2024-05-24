@@ -12,18 +12,19 @@ export const ChatInput = ({
   handleSendMessage,
 }: ChatInputProps) => {
   return (
-    <div className="w-full h-10 relative">
-      <input
-        className="input-custom w-full h-full p-2"
-        placeholder="메시지 보내기"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        type="text"
-      />
-      <div className="absolute top-[10px] right-[10px]">
-        <span onClick={handleSendMessage} className="text-thickRed font-medium">
+    <div className="w-full h-12 relative flex">
+      <div className="w-[85%]">
+        <textarea
+          className="input-custom resize-none h-12 break-words break-all"
+          placeholder={!message ? "메시지 보내기" : ""}
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        />
+      </div>
+      <div className="w-[80px] flex justify-center items-center">
+        <button onClick={handleSendMessage} className="text-thickRed font-bold">
           보내기
-        </span>
+        </button>
       </div>
     </div>
   );
