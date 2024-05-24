@@ -44,7 +44,7 @@ const Chat = () => {
   };
 
   return (
-    <div className="w-full max-w-xl h-screen flex flex-col justify-between bg-[#faf0f0]">
+    <div className="w-full max-w-xl h-[100dvh] flex flex-col justify-between bg-[#faf0f0] fixed">
       <div className="w-full flex justify-center p-4">
         <span className="text-lg font-bold font-jua">
           <span className="text-gray05">Ellio</span> 연애 소셜링
