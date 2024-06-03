@@ -10,6 +10,14 @@ body,
   scroll-behavior: smooth;
 }
 
+.custom-no-underline {
+  text-decoration: none !important;
+  -webkit-text-decoration: none !important;
+  -moz-text-decoration: none !important;
+  -ms-text-decoration: none !important;
+  -o-text-decoration: none !important;
+}
+
 .font-pretendard {
   font-family: "Pretendard", sans-serif;
 }

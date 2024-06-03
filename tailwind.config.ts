@@ -17,7 +17,7 @@ const config = {
     extend: {
       backgroundImage: {
         "complex-gradient":
-          "linear-gradient(to right, #4b4b4b 10%, #000000 100%)",
+          "linear-gradient(to right, #000000 1%, #920028 100%)",
       },
       fontFamily: {
         pretendard: ["Pretendard", "sans-serif"],

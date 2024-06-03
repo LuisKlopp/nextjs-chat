@@ -22,6 +22,18 @@ const Chat = () => {
       return;
     }
 
+    const fetchMessages = async () => {
+      try {
+        const response = await fetch(`${baseUrl}/messages/${room}`);
+        const data: MessagePayload[] = await response.json();
+        setMessages(data);
+      } catch (error) {
+        console.error("Failed to fetch messages:", error);
+      }
+    };
+
+    fetchMessages();
+
     const newSocket = io(baseUrl);
     setSocket(newSocket);
 
@@ -44,18 +56,26 @@ const Chat = () => {
   };
 
   return (
-    <div className="w-full max-w-xl h-[100dvh] flex flex-col justify-between fixed bg-[#f5f5f5]">
-      <div className="w-full flex justify-center p-4 bg-complex-gradient h-16 items-center">
+    <div className="w-full max-w-xl h-[100dvh] flex flex-col fixed bg-[#f5f5f5] justify-between">
+      <div className="w-full flex justify-center flex-col p-4 bg-[#3f3f3f] h-16 items-center">
         <span className="text-sm font-bold font-jua text-white">
-          Ellio 익명 채팅
+          Ellio anonymous chatting
+        </span>
+        <span className="text-gray02 text-xs">
+          소셜링에 오신 걸 환영합니다.
         </span>
       </div>
-      <div>
+      <div className="flex flex-col h-[calc(100dvh-112px)] overflow-scroll">
         {messages.map((msg, index) => (
-          <div key={index}>{msg.message}</div>
+          <div
+            key={index}
+            className="bg-[#673542] py-2 px-4 rounded-2xl my-1 text-white no-underline max-w-[70%] break-words overflow-hidden custom-no-underline"
+          >
+            <span className="custom-no-underline">{msg.message}</span>
+          </div>
         ))}
       </div>
-      <div>
+      <div className="bg-white">
         <ChatInput
           message={message}
           setMessage={setMessage}

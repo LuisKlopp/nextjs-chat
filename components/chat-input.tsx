@@ -1,3 +1,5 @@
+import { Send } from "lucide-react";
+
 import { Dispatch, SetStateAction } from "react";
 
 interface ChatInputProps {
@@ -21,10 +23,8 @@ export const ChatInput = ({
           onChange={(e) => setMessage(e.target.value)}
         />
       </div>
-      <div className="w-[80px] flex justify-center items-center">
-        <button onClick={handleSendMessage} className="text-thickRed font-bold">
-          보내기
-        </button>
+      <div className="w-[70px] flex justify-center items-center bg-[#f5f5f5]">
+        <Send onClick={handleSendMessage}>보내기</Send>
       </div>
     </div>
   );
