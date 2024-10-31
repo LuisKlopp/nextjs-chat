@@ -68,7 +68,7 @@ const Chat = () => {
         <span className="text-gray02 text-base">퍼넥션 그라운드</span>
       </div>
       <div
-        className="flex flex-col overflow-auto gap-2 pl-3 pt-2"
+        className="flex flex-col overflow-auto gap-2 pl-3 pt-2 h-full"
         style={{ scrollPaddingBottom: "0", overscrollBehavior: "contain" }}
       >
         {messages.map((msg, index) => (
