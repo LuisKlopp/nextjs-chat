@@ -64,8 +64,10 @@ const Chat = () => {
   return (
     <div className="w-full max-w-xl h-[100dvh] flex flex-col bg-[#f5f5f5] justify-between">
       <div className="w-full flex justify-center flex-col p-4 gap-2 bg-slate-800 items-center">
-        <span className="text-lg font-bold text-white">Funnection Ground</span>
-        <span className="text-gray02 text-base">퍼넥션 그라운드</span>
+        <span className="text-lg font-bold text-white">
+          Funnection Ground Juke box
+        </span>
+        <span className="text-gray02 text-base">퍼넥션 그라운드 주크 박스</span>
       </div>
       <div
         className="flex flex-col overflow-auto gap-2 pl-3 pt-2 h-full"
