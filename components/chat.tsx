@@ -62,16 +62,19 @@ const Chat = () => {
   }, [messages]);
 
   return (
-    <div className="w-full max-w-xl h-dvh flex flex-col bg-[#f5f5f5] justify-between">
+    <div className="w-full max-w-xl h-[100dvh] flex flex-col bg-[#f5f5f5] justify-between">
       <div className="w-full flex justify-center flex-col p-4 gap-2 bg-slate-800 items-center">
         <span className="text-lg font-bold text-white">Funnection Ground</span>
-        <span className="text-gray02 text-base">신청곡 받아요!!</span>
+        <span className="text-gray02 text-base">퍼넥션 그라운드</span>
       </div>
-      <div className="flex flex-col overflow-scroll gap-2 pl-4 h-full pt-2">
+      <div
+        className="flex flex-col overflow-auto gap-2 pl-3 pt-2"
+        style={{ scrollPaddingBottom: "0", overscrollBehavior: "contain" }}
+      >
         {messages.map((msg, index) => (
           <div
             key={index}
-            className="bg-slate-500 py-3 px-4 rounded-xl my-1 max-w-[200px] text-white no-underline break-words custom-no-underline box-shadow-05"
+            className="bg-slate-500 py-3 px-4 rounded-xl my-1 text-white no-underline break-words custom-no-underline box-shadow-05 whitespace-pre-wrap w-fit max-w-[300px] text-base"
           >
             <span className="custom-no-underline">{msg.message}</span>
           </div>

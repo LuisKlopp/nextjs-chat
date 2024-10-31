@@ -15,12 +15,17 @@ export const ChatInput = ({
 }: ChatInputProps) => {
   return (
     <div className="w-full h-12 flex justify-between">
-      <div className="w-[240px]">
+      <div className="w-full">
         <textarea
-          className="input-custom resize-none h-12 break-words break-all"
+          className="input-custom resize-none h-12 break-words break-all py-4"
           placeholder={!message ? "메시지 보내기" : ""}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
+          style={{
+            lineHeight: "1",
+            display: "flex",
+            alignItems: "center",
+          }}
         />
       </div>
       <div
