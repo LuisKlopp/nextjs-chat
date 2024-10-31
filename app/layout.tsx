@@ -13,8 +13,8 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "문토 연애 소셜링",
-  description: "문토 연애 소셜링",
+  title: "퍼넥션 그라운드",
+  description: "퍼넥션 그라운드",
 };
 
 export default function RootLayout({

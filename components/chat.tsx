@@ -1,7 +1,7 @@
 "use client";
 
 import { ChatInput } from "@/components/chat-input";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import io, { Socket } from "socket.io-client";
 
 interface MessagePayload {
@@ -14,6 +14,8 @@ const Chat = () => {
   const [messages, setMessages] = useState<MessagePayload[]>([]);
   const [message, setMessage] = useState<string>("");
   const [room, setRoom] = useState<string>("default");
+
+  const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const baseUrl = `${process.env.NEXT_PUBLIC_BASE_URL}`;
@@ -55,25 +57,28 @@ const Chat = () => {
     }
   };
 
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
+
   return (
-    <div className="w-full max-w-xl h-[100dvh] flex flex-col fixed bg-[#f5f5f5] justify-between">
-      <div className="w-full flex justify-center flex-col p-4 bg-[#3f3f3f] h-16 items-center">
-        <span className="text-sm font-bold font-jua text-white">
-          Ellio anonymous chatting
+    <div className="w-full max-w-xl h-dvh flex flex-col bg-[#f5f5f5] justify-between">
+      <div className="w-full flex justify-center flex-col p-4 gap-2 bg-slate-800 items-center">
+        <span className="text-lg font-bold font-jua text-white">
+          Funnection Ground
         </span>
-        <span className="text-gray02 text-xs">
-          소셜링에 오신 걸 환영합니다.
-        </span>
+        <span className="text-gray02 text-base">퍼넥션 그라운드</span>
       </div>
-      <div className="flex flex-col h-[calc(100dvh-112px)] overflow-scroll">
+      <div className="flex flex-col overflow-scroll gap-2 pl-4 h-full pt-2">
         {messages.map((msg, index) => (
           <div
             key={index}
-            className="bg-[#673542] py-2 px-4 rounded-2xl my-1 text-white no-underline max-w-[70%] break-words overflow-hidden custom-no-underline"
+            className="bg-slate-500 py-3 px-4 rounded-xl my-1 max-w-[200px] text-white no-underline break-words custom-no-underline box-shadow-05 font-jua"
           >
             <span className="custom-no-underline">{msg.message}</span>
           </div>
         ))}
+        <div ref={messagesEndRef} />
       </div>
       <div className="bg-white">
         <ChatInput
