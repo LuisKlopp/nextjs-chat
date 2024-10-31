@@ -64,16 +64,14 @@ const Chat = () => {
   return (
     <div className="w-full max-w-xl h-dvh flex flex-col bg-[#f5f5f5] justify-between">
       <div className="w-full flex justify-center flex-col p-4 gap-2 bg-slate-800 items-center">
-        <span className="text-lg font-bold font-jua text-white">
-          Funnection Ground
-        </span>
+        <span className="text-lg font-bold text-white">Funnection Ground</span>
         <span className="text-gray02 text-base">신청곡 받아요!!</span>
       </div>
       <div className="flex flex-col overflow-scroll gap-2 pl-4 h-full pt-2">
         {messages.map((msg, index) => (
           <div
             key={index}
-            className="bg-slate-500 py-3 px-4 rounded-xl my-1 max-w-[200px] text-white no-underline break-words custom-no-underline box-shadow-05 font-jua"
+            className="bg-slate-500 py-3 px-4 rounded-xl my-1 max-w-[200px] text-white no-underline break-words custom-no-underline box-shadow-05"
           >
             <span className="custom-no-underline">{msg.message}</span>
           </div>
