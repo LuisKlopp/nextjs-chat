@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 
-import { pretendard } from "@/public/fonts/fonts";
+import { jua } from "@/public/fonts/fonts";
 import MainLayout from "@/components/main-layout";
 
 export const viewport: Viewport = {
@@ -24,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={`${pretendard.className}`}>
+      <body className={`${jua.className}`}>
         <MainLayout>{children}</MainLayout>
       </body>
     </html>

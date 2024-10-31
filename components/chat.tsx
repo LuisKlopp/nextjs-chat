@@ -67,7 +67,7 @@ const Chat = () => {
         <span className="text-lg font-bold font-jua text-white">
           Funnection Ground
         </span>
-        <span className="text-gray02 text-base">퍼넥션 그라운드</span>
+        <span className="text-gray02 text-base">신청곡 받아요!!</span>
       </div>
       <div className="flex flex-col overflow-scroll gap-2 pl-4 h-full pt-2">
         {messages.map((msg, index) => (
